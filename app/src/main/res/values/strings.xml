@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">AlcoolGas</string>
     <string name="txt_message_subtitle">Saiba a melhor opção para o abastecimento do seu carro.</string>
-    <string name="ex_preco_gasolina">Ex: Gasolina: R$ 5,90</string>
-    <string name="ex_preco_alcool">Ex: Álcool: R$ 3,50</string>
+    <string name="ex_preco_gasolina">Ex: Gasolina: R$ 5.90</string>
+    <string name="ex_preco_alcool">Ex: Álcool: R$ 3.50</string>
     <string name="txt_resultado">Resultado</string>
     <string name="btn_calcular">Calcular</string>
     <string name="resultado_alcool_vantajoso">Abasteça com Álcool</string>
