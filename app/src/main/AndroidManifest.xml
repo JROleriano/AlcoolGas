@@ -13,7 +13,13 @@
         android:theme="@style/Theme.AlcoolGas"
         tools:targetApi="31">
         <activity
-            android:name=".calculadoraActivity2"
+            android:name=".FinanceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FincanceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".financeActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

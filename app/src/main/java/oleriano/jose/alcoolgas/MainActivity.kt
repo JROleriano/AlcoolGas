@@ -1,18 +1,22 @@
 package oleriano.jose.alcoolgas
 
+import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.InputFilter
 import android.text.InputType
 import android.text.TextWatcher
+import android.view.MenuItem
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import oleriano.jose.alcoolgas.databinding.ActivityMainBinding
 
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemSelectedListener {
 
     private lateinit var binding: ActivityMainBinding
 
@@ -20,6 +24,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        binding.menuView.setOnNavigationItemSelectedListener(this)
 
         binding.btnCalcular.setOnClickListener {
             calcularVantagem()
@@ -32,6 +38,29 @@ class MainActivity : AppCompatActivity() {
         setupEditText(binding.exPrecoGasolina)
         setupEditText(binding.exPrecoAlcool)
     }
+
+    override fun onNavigationItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.viewGasEta -> {
+
+            }
+            R.id.viewFinance -> {
+                val intent = Intent(this, FinanceActivity::class.java)
+                startActivity(intent)
+                return true
+            }
+            R.id.viewScanner -> {
+                // Ação ao clicar em "scanner" (ou outra ação desejada)
+                return true
+            }
+            R.id.viewCaloria -> {
+                // Ação ao clicar em "calorias" (ou outra ação desejada)
+                return true
+            }
+        }
+        return false
+    }
+
 
     private fun limparCampos() {
         binding.apply {
@@ -96,7 +125,6 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
-
     private fun calcularVantagem() {
         val precoGasolina = binding.exPrecoGasolina.text.toString().replace(',', '.').toDoubleOrNull()
         val precoAlcool = binding.exPrecoAlcool.text.toString().replace(',', '.').toDoubleOrNull()
@@ -111,6 +139,4 @@ class MainActivity : AppCompatActivity() {
             binding.textView4.text = getString(R.string.resultado_invalido)
         }
     }
-
-
 }

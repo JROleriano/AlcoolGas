@@ -9,4 +9,6 @@
     <string name="resultado_gasolina_vantajosa">Abasteça com Gasolina</string>
     <string name="resultado_invalido">Informe os preços corretamente</string>
     <string name="btn_limpar">Limpar</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

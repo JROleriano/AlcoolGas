@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="GasEtan"
+        android:id="@+id/viewGasEta"
+        android:icon="@drawable/baseline_local_gas_station_24"
+        android:checkable="true"/>
+
+    <item
+        android:title="finance"
+        android:id="@+id/viewFinance"
+        android:icon="@drawable/baseline_account_balance_24"
+        android:checkable="true"/>
+
+    <item
+        android:title="scanner"
+        android:id="@+id/viewScanner"
+        android:icon="@drawable/baseline_document_scanner_24"
+        android:checkable="true"/>
+
+    <item
+        android:title="calorias"
+        android:id="@+id/viewCaloria"
+        android:icon="@drawable/baseline_dining_24"
+        android:checkable="true"/>
+
+</menu>
